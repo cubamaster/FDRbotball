@@ -1,4 +1,4 @@
-//#include <kipr/wombat.h>
+#include <kipr/wombat.h>
 //motor 0 -right motor 
 //motor 1 - left motor
 
