@@ -130,11 +130,11 @@ int main()
    
     motor(rw, 100);
     motor(lw, -100);
-    msleep(1000);
+    msleep(900);
    
     motor(rw, 30);
     motor(lw, 30);
-    msleep(2200);
+    msleep(2400);
     freeze(rw);
     freeze(lw);
    
@@ -148,17 +148,28 @@ int main()
    
     motor(rw, -30);
     motor(lw, -30);
-    msleep(4500);
-    /**
-    set_servo_position(bottom_s, 0);
+    msleep(4700);
+
+follow_line_right(0.9, 5500, 100);
+    follow_line_right(0.9, 2000, 30);
+    freeze(rw);
+    freeze(lw);
+   
+   
+    for(i = 0; i < 3; i+= 1) {
+    follow_line_right(0.8, 1500, 80);
+        scissors();
+    }
+   
+    motor(rw, -30);
+    motor(lw, -30);
+    msleep(2350);
+   
+    motor(rw, -50);
+    motor(lw, 50);
     msleep(2000);
-    printf("Hello World\n");
-    scissors();
-    msleep(2000);
-    scissors();
-    //follow_line_right(0.8, 10000, 100);
-    **/
+
    
     return 0;
-   
 }
+   
